@@ -1,78 +1,80 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19920361&assignment_repo_type=AssignmentRepo)
-# Real-Time Chat Application with Socket.io
+# Real-Time Chat App
 
-This assignment focuses on building a real-time chat application using Socket.io, implementing bidirectional communication between clients and server.
+A full-stack real-time chat application built with React, Express, MongoDB, and Socket.io. Users can sign up, log in, create chat rooms, and exchange messages in real time. The app supports online/offline status, typing indicators, and user authentication.
 
-## Assignment Overview
+## Features
+- User authentication (signup/login)
+- Create and join chat rooms
+- Real-time messaging with Socket.io
+- Online/offline user status
+- Typing indicators
+- Room-based message history
+- Responsive UI with Tailwind CSS
 
-You will build a chat application with the following features:
-1. Real-time messaging using Socket.io
-2. User authentication and presence
-3. Multiple chat rooms or private messaging
-4. Real-time notifications
-5. Advanced features like typing indicators and read receipts
+## overview
 
-## Project Structure
 
-```
-socketio-chat/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # UI components
-│   │   ├── context/        # React context providers
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── pages/          # Page components
-│   │   ├── socket/         # Socket.io client setup
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Node.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Socket event handlers
-│   ├── models/             # Data models
-│   ├── socket/             # Socket.io server setup
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
-```
+## Tech Stack
+- **Frontend:** React, Tailwind CSS, socket.io-client
+- **Backend:** Node.js, Express, Socket.io, Mongoose (MongoDB)
 
 ## Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week5-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+### Prerequisites
+- Node.js (v18+ recommended)
+- MongoDB (local or Atlas)
+- pnpm or npm
 
-## Files Included
+### Installation
 
-- `Week5-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Socket.io configuration templates
-  - Sample components for the chat interface
+#### 1. Clone the repository
+```bash
+git clone <repo-url>
+cd week-5-web-sockets-assignment-AmanT776
+```
 
-## Requirements
+#### 2. Install dependencies
+- For the backend:
+  cd server
+  pnpm install # or npm install
+- For the frontend:
+  cd client
+  pnpm install # or npm install
 
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Basic understanding of React and Express
+#### 3. Set up environment variables
+- In `server/.env`, set:
+  ```env
+  MONGO_URI=mongodb://localhost:27017/chatapp
+  JWT_SECRET=your_jwt_secret
+  PORT=7000
+  ```
 
-## Submission
+#### 4. Start the servers
+- Start MongoDB if running locally.
+- In the `server` directory:
+  pnpm start # or npm start
+- In the `client` directory:
+  pnpm run dev # or npm run dev
+- Frontend will run at [http://localhost:5173](http://localhost:5173)
+- Backend will run at [http://localhost:7000](http://localhost:7000)
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+## Usage
+1. Sign up for a new account or log in.
+2. Create a new chat room or join an existing one.
+3. Start chatting in real time!
+4. Open multiple browser windows to test real-time features.
 
-1. Complete both the client and server portions of the application
-2. Implement the core chat functionality
-3. Add at least 3 advanced features
-4. Document your setup process and features in the README.md
-5. Include screenshots or GIFs of your working application
-6. Optional: Deploy your application and add the URLs to your README.md
+## Project Structure
+```
+week-5-web-sockets-assignment-AmanT776/
+├── client/      # React frontend
+├── server/      # Express backend
+└── README.md
+```
 
-## Resources
+## Troubleshooting
+- Ensure MongoDB is running and accessible.
+- Make sure you install all dependencies in both `client` and `server`.
+- If you see CORS or socket connection errors, check that both servers are running and CORS is configured.
+- For JWT decoding, ensure `jwt-decode` is installed in the client.
 
-- [Socket.io Documentation](https://socket.io/docs/v4/)
-- [React Documentation](https://react.dev/)
-- [Express.js Documentation](https://expressjs.com/)
-- [Building a Chat Application with Socket.io](https://socket.io/get-started/chat) 

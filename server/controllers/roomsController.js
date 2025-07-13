@@ -2,7 +2,8 @@ const Room = require('../models/Room');
 
 exports.createRoom = async(req,res)=>{
     try{
-        const createRoom = await Room.create(req.body);
+        const createRoom = await Room.create({ name: req.body.name });
+        console.log(req.body)
         if(!createRoom) return res.status(400).json({message: "can't create a room"});
         res.status(200).json(createRoom); 
     }catch(err){

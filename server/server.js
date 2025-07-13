@@ -5,10 +5,17 @@ const {Server} = require('socket.io')
 const {createServer} = require('node:http');
 const app = express();
 const server = createServer(app);
-const io = new Server(server);
-const PORT = process.env.PORT || 4000;
+const io = new Server(server, {
+  cors: {
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST"],
+    credentials: true
+  }
+});
+const PORT = process.env.PORT || 7000;
 const connectDb = require('./config/db')
 app.use(cors());
+app.use(express.json());
 
 require('./socket/index')(io);
 
