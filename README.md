@@ -13,9 +13,9 @@ A full-stack real-time chat application built with React, Express, MongoDB, and 
 
 ## overview
 
-<img width="191" height="100" alt="Screenshot from 2025-07-13 21-56-38" src="https://github.com/user-attachments/assets/d8300678-782a-4de7-b030-dd1095b1ecda" />
-<img width="191" height="100" alt="Screenshot from 2025-07-13 21-56-27" src="https://github.com/user-attachments/assets/930016b0-e67c-49e9-81b0-5f34867af943" />
-<img width="191" height="100" alt="Screenshot from 2025-07-13 21-55-27" src="https://github.com/user-attachments/assets/4ce970c4-96b8-4471-bbf0-0740d44988b2" />
+<img width="300" height="300" alt="Screenshot from 2025-07-13 21-56-38" src="https://github.com/user-attachments/assets/d8300678-782a-4de7-b030-dd1095b1ecda" />
+<img width="300" height="300" alt="Screenshot from 2025-07-13 21-56-27" src="https://github.com/user-attachments/assets/930016b0-e67c-49e9-81b0-5f34867af943" />
+<img width="300" height="300" alt="Screenshot from 2025-07-13 21-55-27" src="https://github.com/user-attachments/assets/4ce970c4-96b8-4471-bbf0-0740d44988b2" />
 
 ## Tech Stack
 - **Frontend:** React, Tailwind CSS, socket.io-client
